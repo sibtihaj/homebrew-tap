@@ -5,21 +5,21 @@
 class Bolt < Formula
   desc "Deploy Terraform Enterprise in a bolt — K8s and Docker, any cloud"
   homepage "https://github.com/sibtihaj/bolt"
-  version "0.1.1"
+  version "0.2.0"
   license "MPL-2.0"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/sibtihaj/bolt/releases/download/v0.1.1/bolt_Darwin_x86_64.tar.gz"
-      sha256 "2bd2c1367a1cb153145659d2b57b4ba0f4887602003bf8fc546b1076432b6024"
+      url "https://github.com/sibtihaj/bolt/releases/download/v0.2.0/bolt_Darwin_x86_64.tar.gz"
+      sha256 "f9a964e17d63726cc02fcdf721fe44b633bc0fe21bf7536071e448d5925aee1f"
 
       define_method(:install) do
         bin.install "bolt"
       end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/sibtihaj/bolt/releases/download/v0.1.1/bolt_Darwin_arm64.tar.gz"
-      sha256 "fd89cec3932f2eeaff9e78abbfd843997a0d27c178f42072eafec0ec62be16f2"
+      url "https://github.com/sibtihaj/bolt/releases/download/v0.2.0/bolt_Darwin_arm64.tar.gz"
+      sha256 "e578b5c8d35511777251b26379283aa9a03f573652042dcab2ab6bda9e4bffb5"
 
       define_method(:install) do
         bin.install "bolt"
@@ -29,15 +29,15 @@ class Bolt < Formula
 
   on_linux do
     if Hardware::CPU.intel? && Hardware::CPU.is_64_bit?
-      url "https://github.com/sibtihaj/bolt/releases/download/v0.1.1/bolt_Linux_x86_64.tar.gz"
-      sha256 "23b1b02667b0f4981404a8a983bc3ff5593140a230ba4e6e03b49af2283a5b13"
+      url "https://github.com/sibtihaj/bolt/releases/download/v0.2.0/bolt_Linux_x86_64.tar.gz"
+      sha256 "a1b4a3f16c43a0f89f48e89cc06c481585fd5e92c2231a003712b69dd76e1c2d"
       define_method(:install) do
         bin.install "bolt"
       end
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/sibtihaj/bolt/releases/download/v0.1.1/bolt_Linux_arm64.tar.gz"
-      sha256 "1aa355d02b7d4264f705c42a6aeadbe80f565ec6e6005e06e01bcaaafab0bfbf"
+      url "https://github.com/sibtihaj/bolt/releases/download/v0.2.0/bolt_Linux_arm64.tar.gz"
+      sha256 "15bb00d38e2cab2d4bbba89242ff19eb1225f721c2df4cae0fa53f676ff26500"
       define_method(:install) do
         bin.install "bolt"
       end
